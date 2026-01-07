@@ -1,0 +1,40 @@
+{
+  "name": "gerador-qrcode-pix",
+  "version": "1.0.0",
+  "description": "Gerador de QR Code PIX",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": ["pix", "qrcode", "electron"],
+  "author": "Felipe Santana Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.felipesantana.qrcodepix",
+    "productName": "Gerador QRCode PIX",
+    "win": {
+      "target": ["portable"],
+      "icon": "build/icon.ico"
+    },
+    "portable": {
+      "artifactName": "GeradorQRCodePIX.exe"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "style.css",
+      "script.js"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
